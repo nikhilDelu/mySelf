@@ -11,8 +11,6 @@ import toggleDarkMode from "../utils/toggleDarkMode";
 import "../index.css";
 import { useScrollTop } from "../utils/use-scroll-top";
 
-interface Props {}
-
 const NavBar = () => {
   const scrolled = useScrollTop(10);
   return (

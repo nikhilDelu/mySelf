@@ -29,8 +29,6 @@ interface Skill {
   proficiency?: number; // Added proficiency level (out of 10)
 }
 
-interface Props {}
-
 const skillsData: Skill[] = [
   {
     name: "JavaScript",
