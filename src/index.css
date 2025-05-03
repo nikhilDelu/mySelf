@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=Inconsolata:wght@200..900&display=swap");
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
