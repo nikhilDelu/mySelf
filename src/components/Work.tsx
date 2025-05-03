@@ -1,16 +1,6 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Code,
-  BookOpen,
-  Zap,
-  Database,
-  ShoppingCart,
-  Music,
-  Youtube,
-  Users,
-  PlayCircle,
-} from "lucide-react";
+import { BookOpen, Music, Users, PlayCircle } from "lucide-react";
 
 interface Project {
   title: string;

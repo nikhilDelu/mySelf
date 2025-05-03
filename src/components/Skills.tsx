@@ -16,7 +16,6 @@ import {
   Trophy, // For expertise/mastery
   Wand2, // For magic/creativity
   Server,
-  Layers3,
   Boxes,
   GitCommit,
   KeyRound,
@@ -188,10 +187,10 @@ const skillsData: Skill[] = [
   },
 ];
 
-const Skills = (props: Props) => {
+const Skills = () => {
   return (
     <div className="max-w-[900px] mx-auto backdrop-blur-md p-8">
-      <h2 className="text-4xl font-semibold mb-12 text-gray-800 dark:text-gray-100 text-center bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+      <h2 className="text-4xl font-semibold mb-12 text-gray-800 dark:text-gray-100 text-center bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text">
         My Skills
       </h2>
       <div className="space-y-16">

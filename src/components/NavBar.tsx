@@ -13,7 +13,7 @@ import { useScrollTop } from "../utils/use-scroll-top";
 
 interface Props {}
 
-const NavBar = (props: Props) => {
+const NavBar = () => {
   const scrolled = useScrollTop(10);
   return (
     <div
