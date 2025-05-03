@@ -24,7 +24,7 @@ const NavBar = () => {
       style={{ fontFamily: "Inconsolata, Comic+Relief" }}
       className={`${
         scrolled ? "border-b shadow-sm shadow-[#ECDBBA]" : ""
-      } z-50 border-transparent backdrop-blur-sm p-4 flex justify-between items-center fixed top-0 w-full transition-all duration-700 ease-in-out`}
+      } z-50 border-transparent backdrop-blur-sm p-4 flex justify-between items-center fixed top-0 w-full max-w-full transition-all duration-700 ease-in-out `}
     >
       <img
         className="h-8 w-8 rounded-full bg-red-900 cursor-pointer"
