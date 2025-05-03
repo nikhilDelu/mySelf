@@ -52,11 +52,31 @@ const NavBar = () => {
         </a>
       </div>
       <div className="flex flex-1 justify-between items-center sm:hidden  max-w-[180px]">
-        <BadgeInfo size={18} className="cursor-pointer" />
-        <Settings size={18} className="cursor-pointer" />
-        <BriefcaseBusiness size={18} className="cursor-pointer" />
-        <ShieldCheck size={18} className="cursor-pointer" />
-        <UserRoundPen size={18} className="cursor-pointer" />
+        <BadgeInfo
+          onClick={() => scrollToSection("hero")}
+          size={18}
+          className="cursor-pointer"
+        />
+        <Settings
+          onClick={() => scrollToSection("skills")}
+          size={18}
+          className="cursor-pointer"
+        />
+        <BriefcaseBusiness
+          onClick={() => scrollToSection("work")}
+          size={18}
+          className="cursor-pointer"
+        />
+        <ShieldCheck
+          onClick={() => scrollToSection("certifications")}
+          size={18}
+          className="cursor-pointer"
+        />
+        <UserRoundPen
+          onClick={() => scrollToSection("hireme")}
+          size={18}
+          className="cursor-pointer"
+        />
       </div>
       <div onClick={toggleDarkMode} className="cursor-pointer">
         <Sun className="dark:hidden" />
