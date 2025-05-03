@@ -13,6 +13,12 @@ import { useScrollTop } from "../utils/use-scroll-top";
 
 const NavBar = () => {
   const scrolled = useScrollTop(10);
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
   return (
     <div
       style={{ fontFamily: "Inconsolata, Comic+Relief" }}
@@ -26,11 +32,24 @@ const NavBar = () => {
         alt="logo"
       />
       <div className="sm:flex flex-1 justify-between items-center hidden max-w-[450px] mx-20">
-        <p className="cursor-pointer">Me</p>
-        <p className="cursor-pointer">Skills</p>
-        <p className="cursor-pointer">Work</p>
-        <p className="cursor-pointer">Certifications</p>
-        <p className="cursor-pointer">Hire Me</p>
+        <a className="cursor-pointer" onClick={() => scrollToSection("hero")}>
+          Me
+        </a>
+        <a className="cursor-pointer" onClick={() => scrollToSection("skills")}>
+          Skills
+        </a>
+        <a className="cursor-pointer" onClick={() => scrollToSection("work")}>
+          Work
+        </a>
+        <a
+          className="cursor-pointer"
+          onClick={() => scrollToSection("certifications")}
+        >
+          Certifications
+        </a>
+        <a className="cursor-pointer" onClick={() => scrollToSection("hireme")}>
+          Hire Me
+        </a>
       </div>
       <div className="flex flex-1 justify-between items-center sm:hidden  max-w-[180px]">
         <BadgeInfo size={18} className="cursor-pointer" />

@@ -7,15 +7,24 @@ import Work from "./components/Work";
 
 const App = () => {
   return (
-    <div className="h-full dark:bg-[#000000] dark:text-[#FAF6F0]">
+    <div className="h-full w-full dark:bg-[#000000] dark:text-[#FAF6F0]">
       <div className="h-12" />
-
       <NavBar />
-      <HeroSection />
-      <Skills />
-      <Work />
-      <Certifications />
-      <HireMe />
+      <div id="hero">
+        <HeroSection />
+      </div>
+      <div id="skills">
+        <Skills />
+      </div>
+      <div id="work">
+        <Work />
+      </div>
+      <div id="certifications">
+        <Certifications />
+      </div>
+      <div id="hireme">
+        <HireMe />
+      </div>
     </div>
   );
 };
