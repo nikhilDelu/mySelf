@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { BookOpen, Music, Users } from "lucide-react";
 
 interface Project {
   title: string;
