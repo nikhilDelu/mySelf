@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { BookOpen, Music, Users, PlayCircle } from "lucide-react";
+import { motion } from "framer-motion";
+import { BookOpen, Music, Users } from "lucide-react";
 
 interface Project {
   title: string;
@@ -8,50 +8,29 @@ interface Project {
   technologies: string[];
   videoSrc?: string;
   link?: string;
-  videoType?: "mp4" | "youtube"; // Added videoType
+  videoType?: "mp4" | "youtube";
 }
-
-// Gemini icon (using a placeholder since Gemini is not in lucide-react)
-const GeminiIcon = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <path d="M18 8a6 6 0 0 1-6 6 6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6z" />
-    <path d="M2 8h2" />
-    <path d="M20 8h2" />
-    <path d="M12 2v2" />
-    <path d="M12 22v-2" />
-    <path d="M5.6 5.6l1.4 1.4" />
-    <path d="M17 17l1.4 1.4" />
-  </svg>
-);
 
 const projectsData: Project[] = [
   {
-    title: "Hypo: Quiz Olympiad",
+    title: "Myself: Portfolio Website",
     description:
-      "An interactive quiz platform for olympiad preparation, featuring real-time quizzes, a Stripe-integrated payment system for entry fees, and prize distribution to winners.  Quiz questions are dynamically generated from uploaded books.",
-    technologies: ["Next.js", "Tailwind CSS", "MongoDB", "WebSockets"],
-    videoSrc: "https://www.youtube.com/embed/jGhobd9nGoU", // Example YouTube URL
-    link: "#",
+      "A personal portfolio website designed to showcase projects, skills, and experiences in a clean, responsive layout. Built with React and Tailwind CSS, the site uses Framer Motion for smooth animations and includes interactive project previews, contact form integration, and optimized performance for all devices.",
+    technologies: ["React", "Tailwind CSS", "Framer Motion", "EmailJS"],
+    videoSrc: "https://www.youtube.com/embed/yourVideoID",
+    link: "https://my-self-git-main-nikhildelus-projects.vercel.app/",
     videoType: "youtube",
   },
-  {
-    title: "Muzify: Live Stream Music App",
-    description:
-      "A platform for YouTubers to enhance live streams by allowing viewers to add YouTube song links and pay to prioritize their songs in the queue.  Integrates with YouTube live streams.",
-    technologies: ["React", "YouTube API", "Stripe API"],
-    videoSrc: "https://www.youtube.com/embed/jGhobd9nGoU",
-    link: "#",
-    videoType: "youtube",
-  },
+
+  // {
+  //   title: "Muzify: Live Stream Music App",
+  //   description:
+  //     "A platform for YouTubers to enhance live streams by allowing viewers to add YouTube song links and pay to prioritize their songs in the queue.  Integrates with YouTube live streams.",
+  //   technologies: ["React", "YouTube API", "Stripe API"],
+  //   videoSrc: "https://www.youtube.com/embed/jGhobd9nGoU",
+  //   link: "#",
+  //   videoType: "youtube",
+  // },
   // {
   //   title: "Social Post Recommendation App",
   //   description:
@@ -148,13 +127,13 @@ const Work = () => {
               <div className="w-full md:w-1/3 flex justify-center">
                 <div className="w-48 h-48 flex items-center justify-center rounded-lg bg-gray-200 dark:bg-gray-800">
                   {index === 0 && (
-                    <BookOpen className="text-blue-500 w-12 h-12" />
+                    <img
+                      src="ms.png"
+                      className="object-contain h-full rounded-sm"
+                    />
                   )}
-                  {index === 1 && <Music className="text-pink-500 w-12 h-12" />}
-                  {index === 2 && (
-                    <Users className="text-purple-500 w-12 h-12" />
-                  )}
-                  {index === 3 && (
+
+                  {index === 1 && (
                     <img
                       src="fwr.png"
                       className="object-cover h-full rounded-sm"
