@@ -7,7 +7,7 @@ import Work from "./components/Work";
 
 const App = () => {
   return (
-    <div className="h-full w-full dark:bg-[#000000] dark:text-[#FAF6F0]">
+    <div className="h-full w-full dark:bg-[#000000] dark:text-[#FAF6F0] max-w-full overflow-hidden">
       <div className="h-12" />
       <NavBar />
       <div id="hero">

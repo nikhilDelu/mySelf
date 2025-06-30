@@ -52,19 +52,19 @@ const projectsData: Project[] = [
     link: "#",
     videoType: "youtube",
   },
-  {
-    title: "Social Post Recommendation App",
-    description:
-      "A social media application that recommends posts to users based on their preferences.",
-    technologies: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "Recommendation Algorithms",
-    ],
-    videoSrc: "https://www.youtube.com/embed/jGhobd9nGoU",
-    link: "#",
-  },
+  // {
+  //   title: "Social Post Recommendation App",
+  //   description:
+  //     "A social media application that recommends posts to users based on their preferences.",
+  //   technologies: [
+  //     "React",
+  //     "Node.js",
+  //     "Express.js",
+  //     "Recommendation Algorithms",
+  //   ],
+  //   videoSrc: "https://www.youtube.com/embed/jGhobd9nGoU",
+  //   link: "#",
+  // },
   {
     title: "Food Waste Reduction App (Gemini API)",
     description:
@@ -77,7 +77,7 @@ const projectsData: Project[] = [
       "Gemini API",
     ],
     videoSrc: "https://www.youtube.com/embed/jGhobd9nGoU",
-    link: "#",
+    link: "https://food-waste-reduction-two.vercel.app/",
     videoType: "mp4",
   },
 ];
@@ -146,62 +146,21 @@ const Work = () => {
               }`}
             >
               <div className="w-full md:w-1/3 flex justify-center">
-                <AnimatePresence>
-                  {hoveredProject === index && project.videoSrc ? (
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      exit={{ opacity: 0, scale: 0.8 }}
-                      transition={{ duration: 0.3 }}
-                      className="relative rounded-lg shadow-lg overflow-hidden"
-                    >
-                      {project.videoType === "youtube" ? (
-                        <iframe
-                          ref={(el) => {
-                            videoRefs.current[index] = el;
-                          }}
-                          src={project.videoSrc}
-                          title={`${project.title} Demo`}
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowFullScreen
-                          className="w-48 h-48 rounded-lg"
-                          style={{ aspectRatio: "1 / 1" }}
-                        />
-                      ) : (
-                        <iframe
-                          ref={(el) => {
-                            videoRefs.current[index] = el;
-                          }}
-                          src={project.videoSrc}
-                          className="w-48 h-48 rounded-lg object-cover"
-                          style={{
-                            aspectRatio: "1 / 1",
-                          }}
-                          onError={(e) => console.error("Video load error", e)}
-                        />
-                      )}
-                      <div className="absolute inset-0 bg-black/30 rounded-lg flex items-center justify-center">
-                        <PlayCircle className="text-white w-12 h-12" />
-                      </div>
-                    </motion.div>
-                  ) : (
-                    <div className="w-48 h-48 flex items-center justify-center rounded-lg bg-gray-200 dark:bg-gray-800">
-                      {index === 0 && (
-                        <BookOpen className="text-blue-500 w-12 h-12" />
-                      )}
-                      {index === 1 && (
-                        <Music className="text-pink-500 w-12 h-12" />
-                      )}
-                      {index === 2 && (
-                        <Users className="text-purple-500 w-12 h-12" />
-                      )}
-                      {index === 3 && (
-                        <GeminiIcon className="text-green-500 w-12 h-12" />
-                      )}
-                    </div>
+                <div className="w-48 h-48 flex items-center justify-center rounded-lg bg-gray-200 dark:bg-gray-800">
+                  {index === 0 && (
+                    <BookOpen className="text-blue-500 w-12 h-12" />
                   )}
-                </AnimatePresence>
+                  {index === 1 && <Music className="text-pink-500 w-12 h-12" />}
+                  {index === 2 && (
+                    <Users className="text-purple-500 w-12 h-12" />
+                  )}
+                  {index === 3 && (
+                    <img
+                      src="fwr.png"
+                      className="object-cover h-full rounded-sm"
+                    />
+                  )}
+                </div>
               </div>
               <div className="w-full md:w-2/3">
                 <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
