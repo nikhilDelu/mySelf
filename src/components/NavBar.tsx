@@ -48,7 +48,7 @@ const NavBar = () => {
           Certifications
         </a>
         <a className="cursor-pointer" onClick={() => scrollToSection("hireme")}>
-          Hire Me
+          Collaborate
         </a>
       </div>
       <div className="flex flex-1 justify-between items-center sm:hidden  max-w-[180px]">

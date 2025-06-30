@@ -1,7 +1,7 @@
 const HireMe = () => {
   return (
-    <div className="p-8 bg-black border-t-2 backdrop-blur-sm text-center">
-      <h2 className="text-3xl font-bold mb-4">Hire Me</h2>
+    <div className="p-8 dark:bg-black border-0 dark:border-t-2 backdrop-blur-sm text-center">
+      <h2 className="text-3xl font-bold mb-4">Collaborate with Me</h2>
       <p className="text-lg mb-6">
         Looking for a passionate developer? Let’s collaborate!
       </p>
