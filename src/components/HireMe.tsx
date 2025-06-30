@@ -1,6 +1,6 @@
 const HireMe = () => {
   return (
-    <div className="p-8 bg-white/30 backdrop-blur-sm text-center">
+    <div className="p-8 bg-black border-t-2 backdrop-blur-sm text-center">
       <h2 className="text-3xl font-bold mb-4">Hire Me</h2>
       <p className="text-lg mb-6">
         Looking for a passionate developer? Let’s collaborate!
